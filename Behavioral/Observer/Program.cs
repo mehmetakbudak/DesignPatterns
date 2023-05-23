@@ -4,7 +4,6 @@
     Observer tasarım deseninin klasik örnekleri arasında finans örneği gelir. Borsacılar borsadaki herhangi bir değişimden anında haberdar olmak ister. Finans kağıtlarındaki herhangi bir değişimden tüm borsacıları uyarmak mail yahut notfikasyon göndermek istiyorsak observer tasarım deseniyle finans kağıtlarını observe edip, gerekli bilgilendirmeleri yapabiliriz.
 
     Yukarıdaki finans örneğini kodlamadan önce aslında observer tasarım kalıbını implemente etmek için tüm yapmamız gereken, observe etmek istediğimiz özellik değiştiğinde listener' lara bildirim yollayabilmek için, ilgili property nin setter fonksiyonundan notifikasyon fonksiyonunu çağırmaktır. Böylece ilgili property ne zaman set edilirse akabinde fonksiyon da call edilecektir.
-
  */
 
 // Subject : Takip etmek istediğimiz hisse stoku
