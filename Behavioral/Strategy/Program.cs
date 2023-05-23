@@ -6,7 +6,7 @@
     Aşağıda biri XMLSerialize yapmak diğeri de BinarySerialize yapmak üzere iki adet concrete tipimiz var ve bunların ikisi de ISerializable interface inden türetilmiştir. Yukarıda da bahsettiğim gibi iki concrete classımız serialize ve deserialize işlemlerini yani temelde aynı işlemleri iki farklı şekilde yapan sınıftır. Birisi xml serialize-deserialize ederken diğeri binary serialize-deserialize eder. Dolayısıyla bu logic üzerinden strategy pattern kullanılabilir. 
  */
 
-// Client tarafından yapılması gereken tek şey strategy class ımız olan Serializer sınıfına ilgili parametreningönderilmesi ve çalıştırılmasıdır. İlerleyen zamanlarda Json serializer gibi bir yapının da yapıya eklenmek istendiğini düşünürsek yapılması gereken tek şey bunu ISerializable den kalıtmak olacak. Bu şekilde yeni concrete sınıfımız sisteme entegre olmuş olacak.
+// Client tarafından yapılması gereken tek şey strategy class ımız olan Serializer sınıfına ilgili parametrenin gönderilmesi ve çalıştırılmasıdır. İlerleyen zamanlarda Json serializer gibi bir yapının da yapıya eklenmek istendiğini düşünürsek yapılması gereken tek şey bunu ISerializable den kalıtmak olacak. Bu şekilde yeni concrete sınıfımız sisteme entegre olmuş olacak.
 
 
 Serializer serializer = new Serializer(new XmlSerializer());
