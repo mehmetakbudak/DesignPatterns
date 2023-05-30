@@ -11,6 +11,18 @@
 
 using System;
 
+// Main class'ta da Televizyon ve Buzdolabi class'ları örneklenip bize bir şablon sunan Template metot call edilmiştir. Bu template metodların çıktısı olarak, her class için ortak olan metotlar ortak sonuç getirecekken class'ın kendisine özgü olan metotlar ise kendi implemente ettikleri sonucu getirecektir. Yukarıda bahsedilen ana template akış prosesi aynı olacaktır.
+
+Alisveris a1 = new Televizyon();
+a1.TemplateMethod();
+
+Console.WriteLine("**********************");
+
+Alisveris a2 = new Buzdolabi();
+a2.TemplateMethod();
+
+Console.ReadKey();
+
 enum OdemeTipi
 {
     Pesin,
@@ -48,31 +60,35 @@ abstract class Alisveris
     }
 }
 
-//
+// Televizyon class'ı abstract Alisveris class'ından türetilip kendine özgü olan işlemleri OdemeSekli ve Urun kendi içerisinde implemente edilmiştir.
 class Televizyon : Alisveris
 {
     public override void OdemeSekli()
     {
         OdemeTipi = OdemeTipi.Pesin;
+        Console.WriteLine($"Ödeme Tipi => {OdemeTipi}");
     }
 
     public override void Urun()
     {
         UrunAdi = "Televizyon";
+        Console.WriteLine($"Ürün Adı => {UrunAdi}");
     }
 }
 
-//
+// Buzdolabi class'ı abstract Alisveris class'ından türetilip kendine özgü olan işlemleri OdemeSekli ve Urun kendi içerisinde implemente edilmiştir.
 class Buzdolabi : Alisveris
 {
     public override void OdemeSekli()
     {
         OdemeTipi = OdemeTipi.Taksit;
+        Console.WriteLine($"Ödeme Tipi => {OdemeTipi}");
     }
 
     public override void Urun()
     {
         UrunAdi = "Buzdolabı";
+        Console.WriteLine($"Ürün Adı => {UrunAdi}");
     }
 }
 
