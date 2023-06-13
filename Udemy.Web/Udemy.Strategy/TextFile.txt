@@ -1,0 +1,2 @@
+﻿- runtime esnasında bir objenin davranışını değiştirmemize imkan verir.
+
